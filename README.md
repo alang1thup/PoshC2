@@ -1,6 +1,6 @@
-![PoshC2 Logo](https://raw.githubusercontent.com/nettitude/PoshC2/master/resources/images/PoshC2Logo.png)
+![PoshC2 Logo](https://raw.githubusercontent.com/alang1thup/PoshC2/master/resources/images/PoshC2Logo.png)
 
-![Docker Image CI](https://github.com/nettitude/PoshC2/workflows/Docker%20Image%20CI/badge.svg?branch=master)
+![Docker Image CI](https://github.com/alang1thup/PoshC2/workflows/Docker%20Image%20CI/badge.svg?branch=master)
 
 PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming, post-exploitation and lateral movement.
 
@@ -20,14 +20,14 @@ Other notable features of PoshC2 include:
 * Client/Server format allowing multiple team members to utilise a single C2 server.
 * Extensive logging. Every action and response is timestamped and stored in a database with all relevant information such as user, host, implant number etc. In addition to this the C2 server output is directly logged to a separate file.
 * PowerShell-less implants that do not use System.Management.Automation.dll using C# or Python2/Python3.
-* A free and open-source SOCKS Proxy using [SharpSocks](https://github.com/nettitude/SharpSocks)
+* A free and open-source SOCKS Proxy using [SharpSocks](https://github.com/alang1thup/SharpSocks)
 * HTTP(S) and SMB named-pipe comms for implants combined with Implant Daisy-chaining for reaching networks that do not have access to the internet
 
 ## Documentation
 
 We maintain PoshC2 documentation over at https://poshc2.readthedocs.io/en/latest/
 
-Find us on #Slack - [poshc2.slack.com](poshc2.slack.com) (to request an invite send an email to labs@nettitude.com)
+Find us on #Slack - [poshc2.slack.com](poshc2.slack.com) (to request an invite send an email to labs@alang1thup.com)
 
 ## Install
 
@@ -48,7 +48,7 @@ Defaults are master branch to /opt/PoshC2
 Elevated privileges are required as the install script performs `apt` updates and installations.
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/nettitude/PoshC2/master/Install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/alang1thup/PoshC2/master/Install.sh | sudo bash
 ```
 
 Alternatively the repository can be cloned down and the install script manually run.
@@ -60,7 +60,7 @@ sudo ./Install.sh
 You can manually set the PoshC2 installation directory by passing it to the Install.sh script as the `-p` argument. The default is **/opt/PoshC2**:
 
 ```
-curl -sSL https://raw.githubusercontent.com/nettitude/PoshC2/master/Install.sh | sudo bash -s -- -p /root/PoshC2
+curl -sSL https://raw.githubusercontent.com/alang1thup/PoshC2/master/Install.sh | sudo bash -s -- -p /root/PoshC2
 ```
 
 ### Cutting Edge Features
@@ -75,7 +75,7 @@ This does trade stablity for new features however so do it at your own discretio
 To use `dev` or a feature branch pass the branch name to the Install.sh script as the `-b` argument:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/nettitude/PoshC2/dev/Install.sh | sudo bash -s -- -b dev
+curl -sSL https://raw.githubusercontent.com/alang1thup/PoshC2/dev/Install.sh | sudo bash -s -- -b dev
 ```
 
 Note the URL includes the branch name also (here `dev` instead of `master`).
@@ -103,13 +103,13 @@ Default is the master branch
 Elevated privileges are required as the install script performs script installations.
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/nettitude/PoshC2/master/Install-for-Docker.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/alang1thup/PoshC2/master/Install-for-Docker.sh | sudo bash
 ```
 
 To use the `dev` or feature branches with Docker curl down the `Install-for-Docker.sh` on the appropriate branch and pass the branch name as an argument:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/nettitude/PoshC2/BRANCHNAME/Install-for-Docker.sh | sudo bash -s -- -b BRANCHNAME
+curl -sSL https://raw.githubusercontent.com/alang1thup/PoshC2/BRANCHNAME/Install-for-Docker.sh | sudo bash -s -- -b BRANCHNAME
 ```
 
 ### Windows
